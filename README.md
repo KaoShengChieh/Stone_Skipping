@@ -11,3 +11,23 @@
 {%youtube https://youtu.be/JO-nTd-2gdg %}
 
 ![](https://i.imgur.com/dBMUWpo.png)
+
+:::success
+Yes :tada:
+:::
+
+:::info
+This is a message :mega:
+:::
+
+:::warning
+Watch out :zap:
+:::
+
+:::danger
+Oh No! :fire:
+:::
+
+:::spoiler Click to show details
+You found me :stuck_out_tongue_winking_eye:
+:::
