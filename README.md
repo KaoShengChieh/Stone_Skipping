@@ -1,1 +1,2 @@
-# Stone_Skipping
+# StoneSkipping
+![](https://i.imgur.com/Zjdisjd.gif)
