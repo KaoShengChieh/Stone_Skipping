@@ -1,7 +1,11 @@
+
 打水漂
 ===
-:point_right: [搶先體驗 Run on GlowScript](http://www.glowscript.org/#/user/B06902117/folder/Public/program/FinalProject) 
-:point_right: [解說影片 Presentation Video](https://www.youtube.com/watch?v=JO-nTd-2gdg)
+作者：[蘇庭葦](https://github.com/tingwei-fly)、[高聖傑](https://github.com/KaoShengChieh)、[蔡宥杏](https://github.com/tsai-you-shin):monkey:
+
+:point_right: [程式細述 Code Description](Stone_Skipping.ipynb)<br>
+:point_right: [搶先體驗 Run on GlowScript](http://www.glowscript.org/#/user/B06902117/folder/Public/program/FinalProject)<br>
+:point_right: [解說影片 Presentation Video](https://www.youtube.com/watch?v=JO-nTd-2gdg)<br>
 :point_right: [獲獎訪談 Award Interview](https://vphysics.ntu.edu.tw/post.php)
 
 > 朝水面扔出扁平的石頭，讓它在水面上跳躍，這是人類古老的遊戲之一，也是許多人的童年回憶—打水漂。但究竟要怎麼樣才能將石頭打得更遠呢？這引起了我們的興趣。
@@ -62,7 +66,7 @@
 ![](https://i.imgur.com/zAIvKA7.png)
 
 * 由上圖發現隨次數的增加，綠線的下降幅度漸增，而紫線的下降幅度趨緩。意即，綠線接近凹向下的曲線，紫線則接近凹向上。
-* 另外，在初速及轉速大、角度理想的情況下，彈跳次數最多，而水漂後期的彈跳距離相較於一開始都非常短，對照真實裝況我們也可以觀察到這個現象，職業打水漂人士給它一個名字：[Pitty-Pat](https://stoneskipping.com/glossary/)。
+* 另外，在初速及轉速大、角度理想(~10°)的情況下，彈跳次數最多，而水漂後期的彈跳距離相較於一開始都非常短，對照真實裝況我們也可以觀察到這個現象，職業打水漂人士給它一個名字：[Pitty-Pat](https://stoneskipping.com/glossary/)。
 
 ![](https://i.imgur.com/yqWmbby.png)
 
@@ -70,18 +74,22 @@
 * 在空氣中時，石頭受到的阻力會與速率呈正相關，因此一開始速率下降幅度大，隨著石頭受阻力影響，後期下降幅度也逐漸變小。
 * 在水面時，起初石頭速率較快受水的黏度影響小，因此前期速率下降幅度小，隨著石頭速率變慢，後期受水的黏滯現象較明顯，導致速率下降幅度逐漸增加。
 
-由此即可驗證我們實驗所得之特性。
+由此即可驗證我們實驗所得之特性：由於初速較小、或轉速較小、或角度不適當導致在彈跳次數較少時，石頭會像是被水面「黏住」，因此受到水面的影響較大，圖形會較為凹向下。反之，如果彈跳次數較多時，石頭在碰觸水面後，會彷彿彈性碰撞般立即向上反彈，而不會被被水面「黏住」，受到空氣的影響較大，因此圖形會較為凹向上。
 
 ## 延伸思考
-使用除了水和空氣之外的不同介質進行打水漂的模擬。
+完成了原本的研究目標，我們還不滿足，我們思考著要如何讓電腦模擬有不一樣的火花。我們想到不一定要使用空氣和水作為介質，我們可以用一些生活中幾乎不可能用來做實驗的介質來模擬打水漂。因此，我們的程式提供了以下幾種液體介質選擇，這些選擇是考慮密度、互溶性、黏度等物理和化學特性所挑選出來的。
 
 * **上方介質：** 空氣、橄欖油
-* **下方介質：** 純水、汽油、紅酒、苯
+* **下方介質：** 水、汽油、紅酒、苯
 
-下圖為橄欖油與汽油的模擬狀況：
+下圖為橄欖油(上方介質)與水(下方介質)的模擬狀況：
 
-![](https://i.imgur.com/YKNaYbq.png)
-![](https://i.imgur.com/nYiCxn2.png)
+![](https://i.imgur.com/eGtgZcs.png)
+![](https://i.imgur.com/HmcTPAp.png)
+
+這裡更呼應了稍早的論述。上方圖中的紅線為原本「初速很大、轉速很大、角度理想」在空氣與水的狀況；黃線為將上方介質改為橄欖油，其餘初始條件皆與紅線相同的狀況。我們可以清楚地觀察到，由於上方介質的阻力變得更大，使得圖形凹向上的趨勢更為明顯。
+
+更多的模擬可以到我們的[GlowScript](http://www.glowscript.org/#/user/B06902117/folder/Public/program/FinalProject)親自體驗。
 
 ## 開發時程 
 * Week 1 \~ 2 (2017/11/22 \~ 2017/12/05)
@@ -123,7 +131,7 @@
 
 這種形狀極大地簡化計算過程，並包含了打水漂所涉及的物理機制(mechanism)。
 
-![](https://i.imgur.com/dBMUWpo.png)
+![](https://i.imgur.com/YQqNXqA.png)
 
 我們找到了正方形石頭的終端條件。當然，根據經驗，我們打水漂都是選擇圓型的石頭。
 
@@ -139,7 +147,7 @@
 
 我們分析各項參數的物理因次，發現以「無因次」的假設最能簡化我們的計算，並能極佳地模仿剛剛所完成的正方形石頭的計算。以下三個設定為接下來計算圓形石頭所需要之核心參數，並沒有實際的物理意義，其中第一個設定加負號也是方便我們後面解微分方程。
 
-![](https://i.imgur.com/HFu9JFx.png)
+![](https://i.imgur.com/PRZJLrH.png)
 
 ## 附錄二、和轉動參數有關的碰撞之分析
 
