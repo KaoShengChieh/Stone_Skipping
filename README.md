@@ -1,9 +1,9 @@
 
 打水漂
 ===
-作者：[蘇庭葦](https://github.com/tingwei-fly)、[高聖傑](https://github.com/KaoShengChieh)、[蔡宥杏](https://github.com/tsai-you-shin):monkey:
+作者：[高聖傑](https://github.com/KaoShengChieh)、[蘇庭葦](https://github.com/tingwei-fly)、[蔡宥杏](https://github.com/tsai-you-shin):monkey:
 
-:point_right: [程式細述 Code Description](Stone_Skipping.ipynb)<br>
+:point_right: [程式細述 Code Explanation](Stone_Skipping.ipynb)<br>
 :point_right: [搶先體驗 Run on GlowScript](http://www.glowscript.org/#/user/B06902117/folder/Public/program/FinalProject)<br>
 :point_right: [解說影片 Presentation Video](https://www.youtube.com/watch?v=JO-nTd-2gdg)<br>
 :point_right: [獲獎訪談 Award Interview](https://vphysics.ntu.edu.tw/post.php)
